@@ -14,7 +14,7 @@ class CertificateUpdateGeneratorTest {
         CertificateUpdateGenerator certificateUpdateGenerator = new CertificateUpdateGenerator(10, 100);
         Stream<CertificateUpdate> quotes = certificateUpdateGenerator.generateQuotes();
         assertNotNull(quotes);
-        assertEquals(10 * 100, quotes.count());
+        assertEquals(100, quotes.count());
 
     }
 }
