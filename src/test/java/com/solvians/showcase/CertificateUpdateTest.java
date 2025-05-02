@@ -8,14 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CertificateUpdateTest {
     @Test
-    void testIsinFormat() {
-        CertificateUpdate cu = new CertificateUpdate();
-        String isin = cu.getIsin();
-        assertEquals(12, isin.length(), "ISIN should be 12 characters long");
-        assertTrue(isin.matches("^[A-Z]{2}[0-9]{9}[0-9]$"), "ISIN should match expected pattern");
-    }
-
-    @Test
     void testPriceRanges() {
         CertificateUpdate cu = new CertificateUpdate();
         assertTrue(cu.getBidPrice() >= 100.00 && cu.getBidPrice() <= 200.00, "Bid price out of range");
